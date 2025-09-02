@@ -1,0 +1,359 @@
+/*DEFAULT*/
+
+:root{
+    /*THEME COLOR*/
+    --theme-bg-color: #F5F5F5;
+
+    /*CARD COLOR*/
+    --primary-bg-color-card: #7651DC;
+    --secondary-bg-color-card: #FFCC69;
+    --tertiary-bg-color-card: #FFFFFF;
+    --quarternary-bg-color-card: #DCD1FC;
+    --quinary-bg-color-card: #FAEEE2;
+
+    /*TEXT COLOR*/
+    --primary-text-color: #000000;
+    --secondary-text-color: #FFFFFF;
+    --tertiary-text-color: #FFCC69;
+    --quarternary-text-color: #7651DC;
+
+    /*FONT-SIZE*/
+    --large-text: 48px;
+    --large-end-text: 32px;
+    --medium-text: 24px;
+    --small-text: 18px;
+}
+
+@font-face {
+    font-family: 'DM-Sans';
+    src: url(/assets/fonts/static/DMSans-Medium.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+    font-style: italic;
+}
+
+body{
+    font-family: 'DM-Sans';
+    background-color: var(--theme-bg-color);
+    overflow-x: hidden;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.container{
+    padding: 3em 1em;
+    display: grid;
+    row-gap: 3em;
+    grid-template-columns: 1fr;
+}
+
+.bento__brick {
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    transform: scale(0.95);
+    border-radius: 8px;
+    overflow: hidden;
+    gap: 10px;
+}
+
+
+/*----------------------BENTO 1----------------------------*/
+
+.bento-1{
+    background-color: var(--quinary-bg-color-card)
+}
+
+.bento-1 h3{
+    font-size: var(--large-end-text);
+    color: var(--primary-text-color);
+}
+
+.bento-1 h3 span.purple{
+    color: var(--quarternary-text-color);
+    font-style: italic;
+}
+
+.bento-1 img{
+    width: min(100%, 220px);
+}
+
+/*----------------------BENTO 2----------------------------*/
+
+.bento-2{
+    background-color: var(--primary-bg-color-card);
+    align-items: center;
+    text-align: center;
+    color: var(--secondary-text-color);
+}
+
+.bento-2 h3{
+    font-weight: 500;
+    font-size: var(--large-text);
+    line-height: 90%;
+}
+
+.bento-2 h3 span.yellow{
+    color: var(--tertiary-text-color);
+}
+
+.bento-2 h3 span.italic{
+    font-style: italic;
+}
+
+.bento-2 img{
+    width: min(100%, 190px);
+}
+
+.bento-2 p{
+    font-size: var(--small-text);
+}
+
+/*----------------------BENTO 3----------------------------*/
+
+.bento-3{
+    background-color: var(--quarternary-bg-color-card);
+    text-align: center;
+    color: var(--primary-text-color);
+}
+
+.bento-3 h3{
+    font-size: var(--medium-text);
+}
+
+.bento-3 img{
+    width: min(100%, 350px)
+}
+
+.bento-3 p{
+    font-size: var(--small-text);
+}
+
+/*----------------------BENTO 4----------------------------*/
+
+.bento-4{
+    background-color: var(--tertiary-bg-color-card);
+}
+
+.bento-4 img{
+    width: min(100%, 350px);
+}
+
+.bento-4 h3{
+    font-size: var(--medium-text);
+}
+
+/*----------------------BENTO 5----------------------------*/
+
+.bento-5{
+    background-color: var(--secondary-bg-color-card);
+    text-align: justify;
+}
+
+.bento-5 h3{
+    font-size: var(--medium-text);
+    text-align: left;
+}
+
+.bento-5 img{
+    position: relative;
+    top: 3em;
+    width: min(80%, 280px);
+}
+
+/*----------------------BENTO 6----------------------------*/
+
+
+.bento-6{
+    background-color: var(--secondary-bg-color-card);
+}
+
+.bento-6 h3{
+    font-size: var(--large-end-text);
+    color: var(--primary-text-color);
+    text-align: left;
+}
+
+.bento-6 img{
+    width: min(100%, 250px);
+}
+
+/*----------------------BENTO 7----------------------------*/
+
+
+.bento-7{
+    background-color: var(--tertiary-bg-color-card);
+    text-align: left;
+}
+
+.bento-7 h3{
+    font-size: var(--large-text);
+}
+
+.bento-7 p{
+    font-size: var(--small-text);
+}
+
+.bento-7 img{
+    width: min(100%, 180px);
+}
+
+/*----------------------BENTO 8----------------------------*/
+
+.bento-8{
+    background-color: var(--primary-bg-color-card);
+    text-align: center;
+    align-items: center;
+}
+
+.bento-8 img{
+    width: min(100%, 200px);
+}
+
+.bento-8 h3{
+    width: 80%;
+    font-size: var(--large-end-text);
+    color: var(--secondary-text-color);
+}
+
+
+/*CSS RESPONSIVE*/
+
+@media only screen and (min-width: 700px){
+    .container{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2em;
+    }
+
+    .bento-2{
+        grid-column: 1 / span 2;
+    }
+
+    .bento-8{
+        grid-area: 5 / 1;
+        grid-column: span 2;
+    }
+
+}
+
+@media only screen and (min-width: 1000px){
+    .container{
+        grid-template-columns: repeat(4, 1fr);
+        row-gap: 1em;
+    }
+
+    .bento__brick{
+        text-align: left;
+    }
+
+/*----------------------BENTO 1----------------------------*/
+
+    .bento-1{
+        grid-area: 1 / 1;
+        grid-row: 1 / 3;
+        height: 350px;
+    }
+
+/*----------------------BENTO 2----------------------------*/
+    .bento-2{
+        grid-area: 1 / 2;
+        grid-column: span 2;
+        text-align: center;
+        height: 230px;
+        padding: 4em;
+    }
+
+/*----------------------BENTO 3----------------------------*/
+
+    .bento-3{
+        grid-area: 1 / 4;
+        grid-row: span 2;
+    }
+
+    .bento-3 img{
+        position: relative;
+        left: 1em;
+        width: 350px;
+    }
+
+/*----------------------BENTO 4----------------------------*/
+
+    .bento-4{
+        grid-area: 2 / 2;
+    }
+
+    .bento-4 img{
+        position: relative;
+        left: 1em;
+        width: 260px;
+    }
+
+    .bento-4 h3{
+        font-size: var(--large-end-text);
+    }
+
+/*----------------------BENTO 5----------------------------*/
+
+    .bento-5{
+        grid-area: 2 / 3;
+    }
+
+    .bento-5 img{
+        position: absolute;
+        width: min(80%, 200px);
+        top: unset;
+        bottom: -7em;
+    }
+
+    .bento-5 h3{
+        font-size: var(--large-end-text);
+    }
+
+/*----------------------BENTO 6----------------------------*/
+
+    .bento-6{
+        grid-area: 2 / 1;
+        grid-row: 2 / 4;
+        margin-block-start: 10em;
+    }
+
+    .bento-6 img{
+        position: relative;
+        top: 4em;
+        width: 200px;
+    }
+
+/*----------------------BENTO 7----------------------------*/
+
+    .bento-7{
+        grid-area: 3 / 2;
+    }
+
+/*----------------------BENTO 8----------------------------*/
+
+    .bento-8{
+        grid-area: 3 / 3;
+        grid-column: span 2;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
